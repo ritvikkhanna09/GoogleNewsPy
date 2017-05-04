@@ -8,7 +8,7 @@ def main():
     page = br.open(url)
     html = page.read()	
     soup = BeautifulSoup( html,"html.parser")
-    
+    #finding the html tag with class titletext
     for text in soup.findAll('span'):
         print(text)
         if text.has_attr('class') and text['class'] == ['titletext']:
