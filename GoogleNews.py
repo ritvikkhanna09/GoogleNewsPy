@@ -12,7 +12,7 @@ def main():
     for text in soup.findAll('span'):
         print(text)
         if text.has_attr('class') and text['class'] == ['titletext']:
-            print ("-->")
+            print ("->")
             print (text.contents[0])
 			
 if __name__=="__main__":
